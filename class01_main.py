@@ -1,19 +1,7 @@
 distance = int(input("ใส่ระยะทาง : "))
-price = 0
-if(distance > 500) :
-    price = 45
-elif(distance > 300) :
-    price = 35
-elif(distance > 100) :
-    price = 25
-elif(distance > 50) :
-    price = 15
-elif(distance > 5) :
-    price = 10
-elif(distance > 0) :
-    price = 0
-else :
+price = next((p for d, p in [(500, 45), (300, 35), (100, 25), (50, 15), (5, 10), (0, 0)] if distance > d), None)
+if price is None:
     print("Error")
-
-vat = price * 7/100
-print("ระยะทาง : " , distance , "KM" , "ราคาขนส่ง :" , price , "บาท" , "ภาษี :" , vat , "บาท" , "ราคาสุทธิ:" , (price + vat) , "บาท" )
+else:
+    vat = price * 0.07
+    print(f"ระยะทาง : {distance} KM ราคาขนส่ง : {price} บาท ภาษี : {vat:.2f} บาท ราคาสุทธิ: {price + vat:.2f} บาท")
