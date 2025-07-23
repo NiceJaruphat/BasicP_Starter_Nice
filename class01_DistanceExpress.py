@@ -16,4 +16,8 @@ else :
     print("Error")
 
 vat = price * 7/100
+
+if(price < 0) :
+    print("ไม่สามารถขนส่งได้")
+else :
 print("ระยะทาง : " , distance , "Km" , "ราคาขนส่ง :" , price , "บาท" , "ภาษี :" , vat , "บาท" , "ราคาสุทธิ:" , (price + vat) , "บาท" )
