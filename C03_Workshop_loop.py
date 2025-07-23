@@ -4,6 +4,7 @@ Bow_Damage = 10
 Magic_Damage = 30
 
 player_choice_ = int(input("ต่อสู้มอน กด 1  หรือ ออก กด 2 : "))
+
 if player_choice_ == 1:
     print("คุณเลือกต่อสู้กับมอนสเตอร์")
     round = int(input("กรุณากรอกจำนวนรอบที่ต้องการต่อสู้: "))
